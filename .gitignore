@@ -81,3 +81,9 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# VSCode debugging
+.vscode/launch.json
+
+# databases
+*.db3
