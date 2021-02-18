@@ -27,18 +27,21 @@ module.exports = {
 				directory: "./data/seeds",
 			},
 		},
-		production:{
-			client:"pg",
-			connection:pgConnection,
-			pool:{
-				min:2,
-				max:10,
+		production: {
+			client: "pg",
+			connection: {
+			  connectionString: pgConnection,
+			  ssl: { rejectUnauthorized: false }
 			},
-			migrations:{
-				directory:'./data/migrations'
+			pool: {
+			  min: 2,
+			  max: 10
 			},
-			seeds:{
-				directory:'./data/seeds'
+			migrations: {
+			  directory: "./data/migrations"
+			},
+			seeds: {
+			  directory: "./data/seeds"
 			}
-		}	
+		  }	
 }
