@@ -5,6 +5,7 @@ const server = require('../server'); //instance of our server (but separate the 
 
 test('GET/', async ()=>{
     //call the instance of our server with supertest
+    expect(process.env.NODE_ENV).toBe("testing");
     const res= await request(server).get("/")
     expect(res.statusCode).toBe(200)
     expect(res.type).toBe("application/json")
